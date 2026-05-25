@@ -592,17 +592,17 @@ footer{background:var(--dark2);border-top:1px solid rgba(122,140,110,0.1);paddin
     <div class="section-label sr"><span style="color:var(--khaki)">06</span><span style="color:var(--khaki-dim)">お問い合わせ</span></div>
     <h2 class="contact-h2 sr sr-delay-1">あなたが思い描く空間を、<br>私たちに聞かせてください。</h2>
     <p class="contact-sub sr sr-delay-2">ご相談・お見積りはすべて無料です。まず、言葉でお教えいただくだけで構いません。</p>
-    <form onsubmit="return false;">
+    <form action="https://formspree.io/f/mredaogw" method="POST" id="contact-form">
       <div class="form-row">
-        <div class="form-field sr sr-delay-1"><label>お名前</label><input type="text" placeholder="山田 太郎"></div>
-        <div class="form-field sr sr-delay-2"><label>電話番号</label><input type="tel" placeholder="090-0000-0000"></div>
+        <div class="form-field sr sr-delay-1"><label>お名前</label><input type="text" name="name" placeholder="山田 太郎" required></div>
+        <div class="form-field sr sr-delay-2"><label>電話番号</label><input type="tel" name="phone" placeholder="090-0000-0000"></div>
       </div>
-      <div class="form-field sr sr-delay-3"><label>メールアドレス</label><input type="email" placeholder="your@email.com"></div>
+      <div class="form-field sr sr-delay-3"><label>メールアドレス</label><input type="email" name="email" placeholder="your@email.com" required></div>
       <div class="form-field sr sr-delay-4">
         <label>ご相談の種類</label>
-        <select><option value="" disabled selected>— 施工内容を選択 —</option><option>門扉・アプローチ</option><option>フェンス・境界工事</option><option>カーポート・駐車場</option><option>庭園・植栽</option><option>ウッドデッキ</option><option>その他・複合</option></select>
+        <select name="type"><option value="" disabled selected>— 施工内容を選択 —</option><option>門扉・アプローチ</option><option>フェンス・境界工事</option><option>カーポート・駐車場</option><option>庭園・植栽</option><option>ウッドデッキ</option><option>その他・複合</option></select>
       </div>
-      <div class="form-field sr sr-delay-4"><label>ご要望・ご質問</label><textarea placeholder="どのような空間を実現したいか、自由にお書きください。"></textarea></div>
+      <div class="form-field sr sr-delay-4"><label>ご要望・ご質問</label><textarea name="message" placeholder="どのような空間を実現したいか、自由にお書きください。"></textarea></div>
       <div class="form-footer sr sr-delay-4">
         <p class="form-note">ご入力いただいた情報は<br>お見積り・ご相談の目的にのみ使用します。</p>
         <button class="btn-submit" type="submit">送信する<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
